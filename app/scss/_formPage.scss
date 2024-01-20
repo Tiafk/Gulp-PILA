@@ -1,0 +1,295 @@
+.form_content {
+    user-select: none;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: end;
+    
+    .container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        
+        .form-container {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 10px;
+            .title {
+                font-family: 'soviet';
+                font-size: 60px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150px;
+                letter-spacing: 1.2px;
+                color: #192632;
+                margin-bottom: 20px;
+            }
+            .form_page {
+                display: flex;
+                width: 100%;
+                max-width: 613px;
+                flex-direction: column;
+                align-items: center;
+        
+                .name-container, .tel-container {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                .name-container span, 
+                .tel-container span {
+                    color: #FC0000;
+                    font-size: 14px;
+                    margin: 10px 0 0 20px;
+                }
+
+                .name-container {
+                    margin-bottom: 10px;
+                }
+
+                .tel-container {
+                    margin-bottom: 40px;
+                }
+        
+                input {
+                    width: 100%;
+                    max-width: 613px;
+                    padding: 20px 20px 17px 20px;
+                    font-size: 20px;
+                    color: #192632;
+                    outline: none;
+                    border: 1px solid #BDB199;
+        
+                    &:focus {
+                        border:  1px solid #192632;
+                    }
+        
+                    &::placeholder {
+                        color: #BDB199;
+                    }
+                }
+        
+                .submit_container {
+                    display: flex;
+                    width: 100%;
+                    max-width: 613px;
+        
+                    .btn {
+                        cursor: pointer;
+                        display: flex;
+                        padding: 19px 45px 15px;
+                        background: #FC0000;
+                        border: 0;
+                        margin-bottom: 0;
+                        transition: .2s ease;
+        
+                        &:hover {
+                            transition: .2s ease;
+                            box-shadow: 6px 6px 0px #B90303;
+                        }
+        
+                        &:active {
+                            transition: .2s ease;
+                            background: #B90303;
+                            box-shadow: none;
+                        }
+        
+                        p {
+                            color: #F1F1F1;
+                            text-align: center;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            letter-spacing: 0.8px;
+                            text-transform: uppercase; 
+                        }
+                    }
+        
+                    .agreement {
+                        display: flex;
+                        margin-top: 14px;
+                        margin-left: 15px;
+        
+                        input {
+                            cursor: pointer;
+                            width: 10px;
+                            height: 10px;
+                            margin: 0;
+                            margin-right: 5px;
+                        }
+        
+                        p {
+                            color:#192632;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+                    }
+                }
+                
+                .application {
+                    display: none;
+                    margin-top: 25px;
+                    width: 100%;
+    
+                    &__mark {
+                        margin-right: 15px;
+                    }
+    
+                    &__text {
+                        color: #192632;
+                        font-family: 'TT Commons Trial';
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+                .visible {
+                    display: flex;
+                }
+            }
+
+        }
+
+        .footer {
+            user-select: none;
+            display: flex;
+            width: 100%;
+            max-width: 100%;
+            height: 83px;
+            background: #192632;
+            
+            .container-footer {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-self: center;
+                font-size: 20px;
+                padding: 0 60px;
+        
+                .copyrate {
+                    display: flex;
+                    align-items: center;
+            
+                    svg {
+                        margin-right: 10px;
+                    }
+            
+                    .text {
+                        color:#F1F1F1;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+        
+                .link-site {
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    span {
+                        color: #5A636B;
+                    }
+                    a {
+                        cursor: pointer;
+                        text-decoration: none;
+                        color: #F1F1F1;
+                        border-bottom: 1px solid #F1F1F1;
+        
+                        &:hover {
+                            color: #FC0000;
+                            border-bottom: 1px solid #FC0000;
+                        }
+        
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width:1366px) {
+    .form_content {
+        .container {
+            .form-container {
+                .title {
+                    text-align: center;
+                    font-size: calc(40px + (60 - 40) * ((100vw - 375px) / (1366 - 375)));
+                    line-height: calc(60px + (150 - 60) * ((100vw - 375px) / (1366 - 375)));
+                }
+            }
+            .footer {
+                .container-footer {
+                    font-size: calc(14px + (20 - 14) * ((100vw - 375px) / (1366 - 375)));
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:745px) {
+    .form_content {
+        .container {
+            .form-container {
+                text-align: center;
+                
+                .name-container span, 
+                .tel-container span {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:620px) {
+    .form_content {
+        .container {
+            .footer {
+                .container-footer {
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0;
+
+                    .copyrate {
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:548px) {
+    .form_content {
+        .container {
+            .form-container {
+                .form_page {
+                    .submit_container {
+                        flex-direction: column;
+
+                        .btn {
+                            justify-content: center;
+                            margin-bottom: 12px;
+                        }
+
+                        .agreement {
+                            text-align: left;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@import './bikepage';
+@import './formPage';
+@import './header';
+@import './video';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.page {
+    background: #F1E7D4;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    font-family: 'TT Commons Trial';
+    width: 100%;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: 'soviet';
+    src: url('../fonts/src/Soviet\ Font.ttf'),
+        url('../fonts/Soviet\ Font.woff'),
+        url('../fonts/Soviet\ Font.woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'TT Commons Trial Italic Bold';
+    src: url('../fonts/src/TT\ Commons-Trial-Bold\ Italic.ttf'),
+        url('../fonts/TT\ Commons-Trial-Bold\ Italic.woff'),
+        url('../fonts/TT\ Commons-Trial-Bold\ Italic.woff2');
+    font-style: italic;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'TT Commons Trial';
+    src: url('../fonts/src/TT\ Commons-Trial-Regular.ttf'),
+        url('../fonts/TT\ Commons-Trial-Regular.woff'),
+        url('../fonts/TT\ Commons-Trial-Regular.woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'TT Commons Trial Italic';
+    src: url('../fonts/src/TT\ Commons-Trial-Light\ Italic.ttf'),
+        url('../fonts/TT\ Commons-Trial-Light\ Italic.woff'),
+        url('../fonts/TT\ Commons-Trial-Light\ Italic.woff2');
+    font-style: italic;
+    font-weight: 400;
+}
